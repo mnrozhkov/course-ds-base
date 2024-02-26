@@ -12,12 +12,14 @@ cd course-ds-base
 
 ### 2. Create and activate virtual environment
 
-Create virtual environment named `dvc-venv` (you may use other name)
+Create virtual environment named `.venv` (you may use other name)
+
 ```bash
-python3 -m venv dvc-venv
-echo "export PYTHONPATH=$PWD" >> dvc-venv/bin/activate
-source dvc-venv/bin/activate
+python3 -m venv .venv
+echo "export PYTHONPATH=$PWD" >> .venv/bin/activate
+source .venv/bin/activate
 ```
+
 Install python libraries
 
 ```bash
@@ -28,15 +30,8 @@ pip install -r requirements.txt
 Add Virtual Environment to Jupyter Notebook
 
 ```bash
-python -m ipykernel install --user --name=dvc-venv
+python -m ipykernel install --user --name=.venv
 ``` 
-
-Configure ToC for jupyter notebook (optional)
-
-```bash
-jupyter contrib nbextension install --user
-jupyter nbextension enable toc2/main
-```
 
 ## 3. Run Jupyter Notebook
 
